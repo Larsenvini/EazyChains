@@ -1,4 +1,4 @@
-
+API_KEY = "62XA11P6M2XFIXWD9SKARQTMFQMKY8FP6K"
 # Imports
 
 from requests import get
