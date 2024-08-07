@@ -9,4 +9,9 @@ def make_api_url(module, action, **kwargs):
         url += f"&{k}={v}"
     return url
 
-print(make_api_url("account", "balance", address="0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae", tag="latest"))
+def balance_byAddress(wallet):
+    data = get(make_api_url("account", "balance", address=wallet, tag="latest"))
+    data = data.json()
+    return data
+
+print(balance_byAddress("0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae"))
