@@ -1,4 +1,13 @@
 API_KEY = "62XA11P6M2XFIXWD9SKARQTMFQMKY8FP6K"
+
+# 2 FUNÇÕES NOVAS PARA VCS TENTAREM FAZER:
+
+1 - Pegar as últimas transações de um endereço
+
+2 - Pelo CLI, criar uma interação/inputs (menu) pelo terminal p deixar o APP meio funcional
+
+3 - (Opcional) Com as txhash, dissecar e ver se existe alguma forma de retornar oque a transação foi
+
 # Imports
 
 from requests import get
