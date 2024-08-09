@@ -30,15 +30,15 @@ make_api_url()
 
 clean_account_balance()
 	
- 	- Limpa e analisa os dados de saldo da conta retornados pela API do Etherscan. 
+ 	- Função pra limpar e analisar os dados de saldo da conta retornados pela API do Etherscan
 
 clean_last_block()
 
-	- Limpa e analisa os dados do último bloco retornados pela API do Etherscan.
+	- Função pra limpar e analisar os dados do último bloco retornados pela API do Etherscan
 
 clean_transactions():
 
-	- Limpa e analisa os dados de transações retornados pela API do Etherscan
+	- Função pra limpar e analisar os dados de transações retornados pela API do Etherscan
 
 
 get_balance_byAddress()
@@ -52,11 +52,11 @@ get_last_block()
 
 get_last_transactions()
 
-	- Obtém as últimas transações de um endereço Ethereum usando a API do Etherscan.
+	- Obtém as últimas transações de um endereço Ethereum usando a API do Etherscan
 
 menu_interativo()
 
-	-  Menu interativo para interação com o aplicativo via terminal.
+	-  Menu interativo para interação com o aplicativo via terminal
 =======
 
 # EazyChains - Projeto da turma presencial
