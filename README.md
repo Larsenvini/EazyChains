@@ -1,4 +1,8 @@
+# EazyChains: Facilitando Web 3 para usuários finais
+
+. env =
 API_KEY = "62XA11P6M2XFIXWD9SKARQTMFQMKY8FP6K"
+BASE_URL = "https://api.etherscan.io/api"
 
 #  FUNÇÃO NOVA PARA VCS TENTAREM FAZER:
 
@@ -14,7 +18,6 @@ from requests import get
  
 # Variables
 
-BASE_URL = "https://api.etherscan.io/api"
 
 	- get é uma função que recebe como argumento uma url. Responsável por realizar a chamada de api ou "request"
 	- .json() é um método p transformar essa informação em formato json (pré existente em python nativo)
