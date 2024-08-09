@@ -1,12 +1,9 @@
 API_KEY = "62XA11P6M2XFIXWD9SKARQTMFQMKY8FP6K"
 
-# 2 FUNÇÕES NOVAS PARA VCS TENTAREM FAZER:
+#  FUNÇÃO NOVA PARA VCS TENTAREM FAZER:
 
-1 - Pegar as últimas transações de um endereço
-
-2 - Pelo CLI, criar uma interação/inputs (menu) pelo terminal p deixar o APP meio funcional
-
-3 - (Opcional) Com as txhash, dissecar e ver se existe alguma forma de retornar oque a transação foi
+transaction_dissect()
+Com as txhash, dissecar e ver se existe alguma forma de retornar oque a transação foi
 
 # Imports
 
@@ -30,7 +27,19 @@ make_api_url()
 	Exemplo, criar uma url específica para uma chamada de api que precise de um endereço (address) e uma tag (latest) como argumentos.
 
 	make_api_url(address="0xasidj182dias...",tag=latest) -> BASE_URL + url
- 	
+
+clean_account_balance()
+	
+ 	- Limpa e analisa os dados de saldo da conta retornados pela API do Etherscan. 
+
+clean_last_block()
+
+	- Limpa e analisa os dados do último bloco retornados pela API do Etherscan.
+
+clean_transactions():
+
+	- Limpa e analisa os dados de transações retornados pela API do Etherscan
+
 
 get_balance_byAddress()
 
@@ -41,7 +50,15 @@ get_last_block()
 
 	- Retorna o último bloco lançado na blockchain
 
+get_last_transactions()
+
+	- Obtém as últimas transações de um endereço Ethereum usando a API do Etherscan.
+
+menu_interativo()
+
+	-  Menu interativo para interação com o aplicativo via terminal.
 =======
+
 # EazyChains - Projeto da turma presencial
 
 # Lead: Rodrigo Paiva
