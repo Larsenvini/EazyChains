@@ -1,7 +1,7 @@
-from defs import *
+from menu import *
 
 def main():
-    menu_interativo()
+    menu()
 
 if __name__ == "__main__":
     main()
