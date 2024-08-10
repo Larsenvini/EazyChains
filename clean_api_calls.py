@@ -46,14 +46,6 @@ def clean_transactions(data: dict) -> dict:
     except KeyError as e:
         return {"error": f"Failed to parse transactions: {str(e)}"}
 
-"""
-blockNumber
-from
-to
-value
-gas
-gasPrice
-"""
 def clean_TransactionbyHash(data: dict) -> dict:
     if "result" not in data:
         return {"error": "Unexpected format in transaction hash."}
