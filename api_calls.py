@@ -77,11 +77,10 @@ def eth_getTransactionByHash(hash: str) -> dict:
     try:
         response = requests.get(url)
         response.raise_for_status()
-        return response.json()
+        return clean_TransactionbyHash(response.json())
     except requests.exceptions.RequestException as e:
         return {"error": f"HTTP request failed: {str(e)}"}
     except ValueError as e:
         return {"error": f"JSON decoding failed: {str(e)}"}
     
-
 print(eth_getTransactionByHash("0xbc78ab8a9e9a0bca7d0321a27b2c03addeae08ba81ea98b03cd3dd237eabed44"))
