@@ -34,18 +34,29 @@ def view_last_transactions():
     else:
         print(f"Falha ao recuperar as transações: {transactions_data['error']}")
 
+def view_transaction_by_hash():
+    txhash = input("Digite o hash da transação: ")
+    transaction_data = eth_getTransactionByHash(txhash)
+    if "error" not in transaction_data:
+        print("Informações sobre a transação:\n")
+        for k, v in transaction_data.items():
+            print(f"{k}: {v}")
+    else:
+        print(f"\nFalha ao recuperar as transações: {transaction_data['error']}")
+
 def menu():
     while True:
         print("\n--- Menu Interativo ---")
         print("1. Verificar saldo de um endereço Ethereum")
         print("2. Obter o último bloco")
         print("3. Obter últimas transações de um endereço Ethereum")
-        print("4. Sair")
+        print("4. Obter as informações de uma transação por seu Hash")
+        print("5. Sair")
 
-        funcs = {"1": view_balance, "2": view_last_block, "3": view_last_transactions}
-        escolha = input("Escolha uma opção (1-4): ")
+        funcs = {"1": view_balance, "2": view_last_block, "3": view_last_transactions, "4": view_transaction_by_hash}
+        escolha = input("Escolha uma opção (1-5): ")
 
-        if escolha == "4":
+        if escolha == "5":
             print("Saindo do programa...")
             break
         elif escolha in funcs:
