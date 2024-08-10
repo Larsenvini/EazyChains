@@ -67,3 +67,21 @@ def get_last_transactions(address: str, start_block: int = 0, end_block: int = 9
         return {"error": f"HTTP request failed: {str(e)}"}
     except ValueError as e:
         return {"error": f"JSON decoding failed: {str(e)}"}
+
+def eth_getTransactionByHash(hash: str) -> dict:
+    url = make_api_url(
+        module="proxy",
+        action="eth_getTransactionByHash",
+        txhash=hash
+    )
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        return {"error": f"HTTP request failed: {str(e)}"}
+    except ValueError as e:
+        return {"error": f"JSON decoding failed: {str(e)}"}
+    
+
+print(eth_getTransactionByHash("0xbc78ab8a9e9a0bca7d0321a27b2c03addeae08ba81ea98b03cd3dd237eabed44"))
